@@ -1,0 +1,12 @@
+/* This is the stylesheet for tablets and laptops */
+
+@media only screen and (min-width: 768px) {
+  /* 404 Page */
+  /* 404 Page */
+  .page-404 h1 {
+    font-size: 56px;
+  }
+  .page-404 p {
+    font-size: 24px;
+  }
+}

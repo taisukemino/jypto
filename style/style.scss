@@ -1,0 +1,566 @@
+/* Color */
+/* Color */
+$colors: #949CF6, #F499A7, #FFD89C, #8FEADB, #5485FD;
+@each $color in $colors {
+  $index: index($colors, $color);
+
+  .contract-list .contract-list-box:nth-child(5n + #{$index}) .contract-list-box-bg {
+    background-color: $color;
+  }
+
+  .contract .contract-bg-#{$index} {
+    background-color: $color;
+  }
+}
+/*
+.contract-list .ERC20 .contract-list-box-bg {
+  background-color: #949CF6;
+}
+
+.contract-list .cryptokitty .contract-list-box-bg {
+  background-color: #F499A7;
+}
+
+.contract-list .auction .contract-list-box-bg {
+  background-color: #FFD89C;
+}
+
+.contract-list .dao .contract-list-box-bg {
+  background-color: #8FEADB;
+}
+
+.contract-list .erc223 .contract-list-box-bg {
+  background-color: #5485FD;
+} */
+/*
+.contract .ERC20 {
+  background-color: #949CF6;
+}
+
+.contract .cryptokitty {
+  background-color: #F499A7;
+}
+
+.contract .auction {
+  background-color: #FFD89C;
+}
+
+.contract .dao {
+  background-color: #8FEADB;
+}
+
+.contract .erc223 {
+  background-color: #5485FD;
+}
+/* Global */
+/* Global */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  animation: fadeIn 1.0s ease 0s 1 forwards;
+  -moz-animation: fadeIn 1.0s ease 0s 1 forwards;
+  -o-animation: fadeIn 1.0s ease 0s 1 forwards;
+  -webkit-animation: fadeIn 1.0s ease 0s 1 forwards;
+  background-color: #FFF;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #031B4E;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.2;
+}
+
+hr {
+  border: 4px solid #E5E8ED;
+}
+
+pre {
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+}
+
+.container {
+  margin-top: 32px;
+  text-align: center;
+}
+/* Animation */
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Header */
+/* Header */
+.header {
+  border-color: #FFF;
+  text-align: center;
+}
+
+.header h3 {
+  background-color: #FFF;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.header .headroom--pinned h3 {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #E1E1E1;
+  padding: 16px;
+}
+/* Home Page */
+/* Home Page */
+.home-heading hr {
+  width: 40px;
+}
+
+.home-heading h1 {
+  font-size: 48px;
+  font-weight: normal;
+  margin: 72px auto;
+  text-align: center;
+}
+
+.contract-list {
+  margin: 0 auto !important;
+  max-width: 1440px;
+  width: 90%;
+}
+
+.contract-list .contract-list-box {
+  padding: 8px;
+}
+
+.contract-list a:hover {
+  opacity: 0.9;
+}
+
+.contract-list .contract-list-box-bg {
+  border-radius: 4px;
+  height: 100%;
+}
+
+.contract-list .title {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 56px;
+  padding-top: 64px;
+  text-align: center;
+  width: 100%;
+}
+
+.contract-list .contract-list-box-bottom {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 4px 4px;
+}
+
+.contract-list .contract-list-box-bottom li {
+  border-radius: 0 0 4px 4px;
+  color: #FFF;
+  font-size: 16px;
+  height: 56px;
+  line-height: 1.2;
+  padding-top: 20px;
+}
+
+.contract-list .tag {
+  float: left;
+  margin-left: 16px;
+  text-transform: uppercase;
+}
+
+.contract-list .tag svg {
+  height: 20px;
+  width: 20px;
+}
+
+.contract-list .tag svg path {
+  fill: #FFF;
+}
+
+.contract-list .tag .tag-name {
+  margin-left: 4px;
+  vertical-align: top;
+}
+
+.contract-list .tag .fa-tags {
+  margin-right: 4px;
+}
+
+.contract-list .author {
+  margin-right: 16px;
+  text-align: right;
+}
+/* Contract Page */
+/* Contract Page */
+.contract .share-icons {
+  background-color: rgba(229, 232, 237, 0.6);
+  border-radius: 50%;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 24px;
+  height: 40px;
+  line-height: 1.9;
+  position: absolute;
+  right: 16px;
+  text-align: center;
+  transition: 0.4s;
+  top: 16px;
+  width: 40px;
+}
+
+.contract .share-icons a {
+  transition: 0.4s;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.contract .share-icons svg {
+  height: 40px;
+  width: 40px;
+}
+
+.contract .share-icons-animation a {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.contract .share-icons .share-graph {
+  box-shadow: none;
+  opacity: 1;
+  padding: 10px;
+  position: relative;
+  z-index: 100;
+}
+
+.contract .share-icons .share-graph svg {
+  color: #E5E8ED;
+  height: 20px;
+  opacity: 0.4;
+  position: relative;
+  right: 1px;
+  top: -2px;
+  width: 20px;
+}
+
+.contract .share-icons a:nth-child(2) {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.contract .share-icons a:nth-child(2) svg {
+  fill: rgba(229, 232, 237, 0.6);
+  left: -10px;
+  position: relative;
+  top: -30px;
+  transition: 1.0s;
+}
+
+.contract .share-icons a:nth-child(3) {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.contract .share-icons a:nth-child(3) svg {
+  fill: rgba(229, 232, 237, 0.6);
+  left: -10px;
+  position: relative;
+  top: -30px;
+  transition: 0.7s;
+}
+
+.contract .share-icons a:nth-child(4) {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.contract .share-icons a:nth-child(4) svg {
+  fill: rgba(229, 232, 237, 0.6);
+  left: -10px;
+  position: relative;
+  top: -30px;
+  transition: 1.0s;
+}
+
+.contract .share-icons-animation a {
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.contract .share-icons-animation a:nth-child(2) {
+  background-color: #FFF;
+  right: 60px;
+  top: 0;
+  transition: 0.5s;
+}
+
+.contract .share-icons-animation a:nth-child(2) svg {
+  fill: #1da1f2;
+  left: 0;
+  position: relative;
+  top: 0;
+  transition: 0.5s;
+}
+
+.contract .share-icons-animation a:nth-child(2):hover,
+.contract .share-icons-animation a:nth-child(3):hover,
+.contract .share-icons-animation a:nth-child(4):hover {
+  transition-delay: 0;
+}
+
+.contract .share-icons-animation a:nth-child(3) {
+  background-color: #FFF;
+  right: 45px;
+  top: 45px;
+  transition: 0.5s;
+}
+
+.contract .share-icons-animation a:nth-child(3) svg {
+  fill: #ff4500;
+  left: 0;
+  position: relative;
+  top: 0;
+  transition: 0.5s;
+}
+
+.contract .share-icons-animation a:nth-child(4) {
+  background-color: #FFF;
+  right: 0;
+  top: 60px;
+  transition: 0.5s;
+}
+
+.contract .share-icons-animation a:nth-child(4) svg {
+  fill: #212121;
+  left: 0;
+  position: relative;
+  top: 0;
+  transition: 0.5s;
+}
+
+.contract .title {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 80px;
+  text-align: center;
+  width: 100%;
+}
+
+.contract .tag svg {
+  height: 20px;
+  width: 20px;
+}
+
+.contract .tag svg path {
+  fill: #FFF;
+}
+
+.contract .tag .tag-name {
+  margin-left: 4px;
+  vertical-align: top;
+}
+
+.contract .contract-box {
+  height: 100%;
+  min-height: 200px;
+  position: relative;
+}
+
+.contract .contract-box ul {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.contract .contract-box ul li {
+  color: #FFF;
+  font-size: 18px;
+}
+
+.contract .contract-box .tag {
+  float: left;
+  margin-left: 16px;
+  text-transform: uppercase;
+}
+
+.contract .contract-box .tag .fa-tags {
+  margin-right: 4px;
+}
+
+.contract .contract-box .author {
+  margin-right: 16px;
+  text-align: right;
+}
+
+.contract .author .author-by {
+  color: #E5E8ED;
+  margin-right: 4px;
+  opacity: 0.7;
+}
+
+.contract .contract-bottom {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.contract .contract-source,
+.contract .official-links {
+  margin-top: 32px;
+}
+
+.contract h4 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.contract .official-links ul li {
+  margin-left: 0;
+}
+
+.contract .official-links ul li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.contract .official-links ul li a[href=""] {
+  cursor: default;
+  pointer-events: none;
+}
+
+.contract .official-links ul li a svg {
+  color: #000;
+  height: 24px;
+  width: 24px;
+}
+
+.contract .official-links ul li a svg path:hover {
+  fill: #0069FF;
+}
+
+.contract .official-links ul li a[href=""] svg path {
+  fill: #E5E8ED;
+}
+
+.contract .official-links ul li a[href=""] svg path:hover {
+  fill: #E5E8ED;
+}
+
+.contract .contract-source .copy {
+  animation-duration: 1s;
+  color: #0069FF;
+  cursor: default;
+  float: right;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+.contract .contract-source .etherscan-link {
+  margin-left: 8px;
+}
+
+.contract .contract-source .etherscan-link svg {
+  height: 24px;
+  vertical-align: top;
+  width: 24px;
+}
+
+.contract .contract-source .ace_editor {
+  box-shadow: 0 -2px 2px 0 rgba(208, 209, 213, 0.50), 0 2px 2px 0 rgba(208, 209, 213, 0.50);
+  border-radius: 4px;
+}
+
+.contract .contract-source .ace_editor .ace_gutter {
+  background: #FFF;
+  margin-top: 8px;
+}
+
+.contract .contract-source .ace_editor .ace_error,
+.contract .contract-source .ace_editor .ace_info,
+.contract .contract-source .ace_editor .ace_warning {
+  display: none;
+}
+
+.contract .contract-source .ace_editor .ace_scroller .ace_content {
+  margin-top: 8px !important;
+}
+
+.contract .contract-source .ace_editor .ace_scroller .ace-tomorrow .ace_print-margin {
+  display: none;
+}
+
+.contract .report {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.contract .report svg {
+  height: 20px;
+  margin-top: -2px;
+  margin-right: 4px;
+  width: 20px;
+}
+
+.contract .report .report-name {
+  vertical-align: top;
+}
+/* 404 Page */
+/* 404 Page */
+.page-404 {
+  margin-top: 64px;
+}
+
+.page-404 h1 {
+  color: #0069FF;
+  font-size: 40px;
+  margin-top: 32px;
+}
+
+.page-404 p {
+  font-size: 16px;
+  margin-top: 24px;
+}
+
+.page-404 a {
+  color: #0069FF;
+}
